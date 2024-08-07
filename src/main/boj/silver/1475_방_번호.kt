@@ -1,3 +1,5 @@
+package silver
+
 fun main() {
     val n = readln().toCharArray()
     var arr = IntArray(10)

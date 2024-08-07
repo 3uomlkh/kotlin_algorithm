@@ -1,3 +1,5 @@
+package silver
+
 fun main() {
     val (n, m, v) = readln().split(" ").map { it.toInt() }
     val graph = Array(n + 1) { IntArray(n + 1) }
