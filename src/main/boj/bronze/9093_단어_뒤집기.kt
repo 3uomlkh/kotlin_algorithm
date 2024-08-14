@@ -5,21 +5,16 @@ import java.util.*
 
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
-    var t = br.readLine().toInt()
+    val t = br.readLine().toInt()
+    val sb = StringBuilder()
 
-    while (t-- > 0) {
+    repeat(t) {
         val st = StringTokenizer(br.readLine())
-        val stack = Stack<Char>()
-        val sb = StringBuilder()
-
-        while (st.hasMoreTokens()) {
-            val word = st.nextToken()
-            for (c in word) stack.push(c)
-            for (i in word.indices) sb.append(stack.pop())
-
-            sb.append(" ")
+        repeat(st.countTokens()) {
+            sb.append(st.nextToken().reversed()).append(" ")
         }
-
-        println(sb.toString())
+        sb.appendLine()
     }
+
+    print(sb.toString())
 }
