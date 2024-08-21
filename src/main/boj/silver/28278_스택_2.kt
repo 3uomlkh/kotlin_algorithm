@@ -4,8 +4,8 @@ import java.io.*
 import java.util.ArrayList
 import java.util.StringTokenizer
 
-val stack = ArrayList<Int>()
-var size = 0
+private val stack = ArrayList<Int>()
+private var size = 0
 
 // 시간 초과 -> StringTokenizer와 StringBuilder로 수정 후 통과
 fun main() {
@@ -30,12 +30,12 @@ fun main() {
     }
 }
 
-fun push(x: Int) {
+private fun push(x: Int) {
     stack.add(x)
     size++
 }
 
-fun pop(): Int {
+private fun pop(): Int {
     if (size == 0) {
         return -1
     }
@@ -45,15 +45,15 @@ fun pop(): Int {
     return num
 }
 
-fun size(): Int {
+private fun size(): Int {
     return size
 }
 
-fun isEmpty(): Int {
+private fun isEmpty(): Int {
     return if (size == 0) return 1 else 0
 }
 
-fun peak(): Int {
+private fun peak(): Int {
     if (size == 0) {
         return -1
     }
