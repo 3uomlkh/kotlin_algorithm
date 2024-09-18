@@ -1,12 +1,13 @@
 package bronze
 
-import java.io.*
 import java.util.StringTokenizer
 
 fun main() {
-    val br = BufferedReader(InputStreamReader(System.`in`))
-    val st = StringTokenizer(br.readLine())
-    val a = st.nextToken().toLong()
-    val b = st.nextToken().toLong()
-    println("${(a + b) * (a - b)}")
+    val st = StringTokenizer(readln())
+    var sum = 0
+    repeat(st.countTokens()) {
+        val num = st.nextToken().toInt()
+        sum += num * num
+    }
+    println(sum % 10)
 }
